@@ -5,11 +5,17 @@
   desktop - 1200px */
 
   /* Mobile first */
-  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  outline: 1px solid red;
+
+  /* Mobile screen */
+  @media screen and (min-width:480px) {
+    width: 480px;
+  }
 
   /* Tablet styles */
     @media screen and (min-width:768px) {
@@ -18,6 +24,6 @@
 
   /* Desktop styles */
   @media screen and (min-width:1200px) {
-    max-width: 1200px;
+    max-width: 1140px;
   }
 }
