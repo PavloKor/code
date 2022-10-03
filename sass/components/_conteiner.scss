@@ -1,0 +1,23 @@
+.conteiner {
+  /* Breakpoints */
+  /* mobile - 480px
+  tablet - 768pxpx
+  desktop - 1200px */
+
+  /* Mobile first */
+  max-width: 480px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Tablet styles */
+    @media screen and (min-width:768px) {
+      max-width: 738px;
+    }
+
+  /* Desktop styles */
+  @media screen and (min-width:1200px) {
+    max-width: 1200px;
+  }
+}
