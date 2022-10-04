@@ -11,6 +11,26 @@
 
 body {
   padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Mobile screen */
+  /* Tablet styles */
+  /* Desktop styles */
+}
+@media screen and (min-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+  }
 }
 
 /* .conteiner {
@@ -40,33 +60,29 @@ body {
   tablet - 768pxpx
   desktop - 1200px */
   /* Mobile first */
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid red;
   /* Mobile screen */
-  /* Tablet styles */
-  /* Desktop styles */
-}
-@media screen and (min-width: 480px) {
-  .conteiner {
+  /* @media screen and (min-width:480px) {
     width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .conteiner {
+  } */
+  /* Tablet styles */
+  /* @media screen and (min-width:768px) {
     max-width: 738px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .conteiner {
+  } */
+  /* Desktop styles */
+  /* @media screen and (min-width:1200px) {
     max-width: 1200px;
-  }
+  } */
+}
+
+.page-header {
+  /* position: relative; */
 }
 
 .nav {
-  padding: 0 15px;
+  padding: 5px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,6 +97,43 @@ body {
   text-align: center;
   width: 150px;
   border-radius: 10px;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0%;
+  padding: 0%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-conteiner {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  background-color: rgb(117, 186, 186);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.menu-conteiner.is-open {
+  display: block;
 }
 
 .section-title {
@@ -110,7 +163,6 @@ body {
   border: 1px solid black;
   text-align: center;
   padding: 20px;
-  /* margin: 0 5px; */
   border-radius: 5px;
 }
 .features-item:hover, .features-item:focus {
@@ -150,7 +202,8 @@ body {
 }
 @media screen and (min-width: 767px) {
   .review-item {
-    width: calc((100% - 15px) / 3);
+    /* width: calc((100% - 3 * 20px) / 3); */
+    width: 50%;
     /* margin-bottom: 10px; */
   }
 }

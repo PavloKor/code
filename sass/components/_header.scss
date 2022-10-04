@@ -1,9 +1,14 @@
-.page-header {}
+.page-header {
+  /* position: relative; */
+}
 
-.conteiner {}
+.conteiner {
+  
+}
 
 .nav {
-  padding: 0 15px;
+  
+  padding: 5px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,8 +25,43 @@
   width: 150px;
   border-radius: 10px;
 }
+.menu-button {
+  display: inline-flex;
+  margin: 0%;
+  padding: 0%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.menu-button .icon-close {
+  display: none;
+}
+.menu-button.is-open .icon-close {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+.menu-conteiner {
+  display: none;
 
-.section {}
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+
+  background-color: rgb(117, 186, 186);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.menu-conteiner.is-open {
+  display: block;
+}
+
+.section {
+  
+}
 
 .features {}
 
@@ -49,7 +89,7 @@
   border: 1px solid black;
   text-align: center;
   padding: 20px;
-  /* margin: 0 5px; */
+  
   border-radius: 5px;
   &:hover, &:focus {
     border: 3px solid rgb(26, 24, 20);

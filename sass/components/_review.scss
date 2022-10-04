@@ -18,7 +18,8 @@
   border-radius: 5px;
   
   @media screen and (min-width: 767px) {
-    width: calc((100% - 3 * 5px) / 3);
+    /* width: calc((100% - 3 * 20px) / 3); */
+    width: 50%;
     /* margin-bottom: 10px; */
   }
 }
