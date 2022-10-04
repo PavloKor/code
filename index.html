@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Мета-тег viewport важливий для адаптивних сторінок</title> 
-    <title>WebStudio</title>
+    <title>Тренування</title> 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!--Fonts-->
@@ -51,6 +50,11 @@
       </div>
     </div>
     <main>
+
+      <div class="conteiner">
+        <button type="button" data-modal-open >Open</button>
+      </div>
+
       <section class="section features">
         <div class="features-conteiner">
           <h2 class="section-title">Заголовок секції</h2>
@@ -73,8 +77,29 @@
         </ul>
       </section>
     </main>
+    <div class="backdrop is-hidden" data-modal >
+      <div class="modal">
+        <button type="button" data-modal-close >Close</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Perferendis asperiores recusandae reprehenderit. 
+          Quasi iusto obcaecati excepturi nam, 
+          quam praesentium soluta ex amet veritatis sunt debitis magni! 
+          Corrupti, aliquam. Consequuntur, fugiat?</p>
+      </div>
+    </div>  
   </body>
   <!--JS Scripte-->
   <script src="./js/modal.js"></script>
   <script src="./js/menu.js"></script>
+  <!--Скрипт для зручності-->
+  <script>
+    (() => {
+      document.querySelector('.register-form').addEventListener('submit', e => {
+        e.preventDefault();
+        new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`)
+        );
+      });
+    })();
+  </script>
 </html>
