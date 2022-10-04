@@ -1,4 +1,6 @@
-.backdrop {
+.backdrop-menu {
+  overflow-y: scroll;
+  padding: 20px;
   position: fixed;
   top: 0%;
   left: 0%;
@@ -6,6 +8,19 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity $perehid, visibility $perehid;
+  &__modal {
+
+    background-color: #fff;
+    padding: 20px;
+  }
+  &__btn {
+    display: inline-flex;
+    margin: 0%;
+    padding: 0%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 }
 
 .is-hidden {
@@ -15,20 +30,26 @@
   transition: opacity $perehid, visibility $perehid;
 }
 
-.backdrop__modal {
+/* .backdrop__modal {
+  
   padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
+  max-width: 450px;
   background-color: $main-bcg-cl;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
 
-.backdrop__btn {
+  @media screen and (min-width: 768px) {
+    background-color: aqua;
+    
+  }
+} */
+
+/* .backdrop__btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -42,9 +63,5 @@
   border-radius: 50px;
   cursor: pointer;
   transition: color $perehid;
-}
+} */
 
-.modal-btn:focus .close-icon,
-.modal-btn:hover .close-icon {
-  fill: var(--accent-txt-cl);
-}
